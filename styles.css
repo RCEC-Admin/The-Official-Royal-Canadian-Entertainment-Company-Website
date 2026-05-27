@@ -40,12 +40,12 @@ body {
     align-items: center;
     gap: 0.7rem;
     text-decoration: none;
-    font-size: clamp(1rem, 3.2vw, 10rem);
+    font-size: clamp(1rem, 4vw, 10rem);
     font-weight: 500;
 }
 
 .logo-img {
-    width: clamp(.5rem, 3vw, 10rem);
+    width: clamp(.5rem, 5vw, 10rem);
     height: auto;
     margin-left: 2vw;
 }
