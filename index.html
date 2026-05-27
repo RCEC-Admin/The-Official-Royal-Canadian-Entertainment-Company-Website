@@ -11,31 +11,44 @@
 
 <body>
 <!-- Header title + logo -->
-	<div class="Header">
-		<a href="index.html"><img src="Website Images/RCEC Logo Clean Logo.png" alt="Logo"></a>
-		<a href="index.html" class="logo">The <span>R</span>oyal Canadian <span>E</span>ntertainment Company</a>
-	</div>
-	<!-- Sub links below header -->
-		<div class="Headerlinks">
-				<a href="index.html" class="activeH">Home</a>
-				<a href="CompanyIntroduction.html">Company Introduction</a>
-				<a href="Artists.html">Artists</a>
-        <div class="dropdown">
-				<a href="ProgramQuote.html">Program<b>/</b>quote</a>
+	<header class="nav">
+        <div class="nav-container">
+        <div class="nav-inner">
+            <a href="../RCEC Code/index.html" class="brand">
+                <img src="../RCEC Code/Website Images/RCEC Logo Clean Logo.png" class="logo-img">
+                <p  class="text"><span>R</span>oyal Canadian <span>E</span>ntertainment Company</p>
+            </a>
+        </div>
+        <div>
+            <!-- Hamburger -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+            </label>
+
+            <ul class="menu">
+                <li><a href="../RCEC Code/index.html" class="text" id="activeH">Home</a></li>
+                <li><a href="../RCEC Code/CompanyIntroduction.html" class="text">Company Introduction</a></li>
+                <li><a href="../RCEC Code/Artists.html" class="text">Artists</a></li>
+                <li><div class="dropdown">
+				<a href="../RCEC Code/ProgramQuote.html" class="text">Program<b>/</b>quote</a>
 				<i class="fa fa-caret-down"></i>
 				</button>
 					<div class="dropdown-content">
-						<a href="RefinedMagicProgram.html">Refined Magic Rendezvous</a>
-						<a href="RegalGalaProgram.html">Regal Magic Gala</a>
-						<a href="RoyalMagicProgram.html">Royal Magic Jubilee</a>
-						<a href="Education.html">The Imperial Education Program</a>
-						<a href="Consulting.html">Consulting for Theatre and Film</a>
+						<a href="../RCEC Code/RefinedMagicProgram.html">Refined Magic Rendezvous</a>
+						<a href="../RCEC Code/RegalGalaProgram.html">Regal Magic Gala</a>
+						<a href="../RCEC Code/RoyalMagicProgram.html">Royal Magic Jubilee</a>
+                        <a href="../RCEC Code/Education.html">The Imperial Education Program</a>
+                        <a href="../RCEC Code/Consulting.html">Consulting for Theatre and Film</a>
 					</div>
-				</div>
-				<a href="https://www.youtube.com/@TheRCEC" target="_blank">Youtube</a>
-				<a href="Contact.html">Contact Us</a>
-		</div>
-<hr style="color: white;">
+				</div></li>
+                <li><a href="https://www.youtube.com/@TheRCEC" target="_blank" class="text">YouTube</a></li>
+                <li><a href="../RCEC Code/Contact.html" class="text">Contact Us</a></li>
+            </ul>
+        </div>
+        </div>
+    </header>
+
 <!-- Image Carousel -->
 <div class="IC1">
 	<div class="imgcarousel">
@@ -44,14 +57,6 @@
 	</div>
 </div>
 
-<!-- Phone Disclaimer -->
-	<div class="Disclaimer">
-		<p>DISCLAIMER!!! Our website is new, and the creator is incompetent! So if you are seeing this it is because you are on your phone. <br><br>
-			Please note, this site has much more to offer visually on a laptop or desktop, please check it out there, or come back in a eon when the programmer figures
-			out how to make this site compatiable visually with your device. <br><br> 
-			We thank you for your patience, sincerely, Chris Wonder -Programmer, Head of the RCEC.
-		</p>
-	</div>
 <!-- Sub text below image Carousel -->
 	<div class="text-content">
 		<p>Hi! Prince Wonder here, I am the face of the Royal Canadian Entertainment Company. <br>
@@ -100,9 +105,96 @@
 		<br>If you are unsure of which would be best suited, we will give our best recommendation to meet your entertainment dreams.</p>	
 	</div>
 <!-- Program transitional images that link to type of program-->
-	
-<!-- Program videos that showcase each type of program -->
+<div class="grid-container-artist" id="Program-Three-Shows">
+	<div>
+		<div class="grid-item">
+			<div class="top">
+				<img src="Website Images/stock.png" class="fluid">
+			</div>
+			<div class="content-text">
+				<p>Standard</p>
+			</div>
+			<div class="bottom">
+				<img src="Website Images/RCEC Logo Transition 250.png" class="fluid">
+				<a href="RefinedMagicProgram.html"><div class="content-desc">
+					<p>Click for more info!</p>
+				</div></a>
+			</div>
+		</div>
+		<div class="text-content">
+		<p><span>R</span>efined <span>M</span>agic <span>R</span>endezvous</p>
+		</div>
+	</div>
 
+	<div>
+		<div class="grid-item">
+			<div class="top">
+				<img src="Website Images/stock.png" class="fluid">
+			</div>
+			<div class="content-text">
+				<p>Premium</p>
+			</div>
+			<div class="bottom">
+				<img src="Website Images/RCEC Logo Transition 250.png" class="fluid">
+				<a href="RegalGalaProgram.html"><div class="content-desc">
+					<p>Click for more info!</p>
+				</div></a>
+			</div>
+		</div>
+		<div class="text-content">
+		<p><span>R</span>egal <span>M</span>agic <span>G</span>ala</p>
+		</div>
+	</div>
+
+	<div>
+		<div class="grid-item">
+			<div class="top">
+				<img src="Website Images/stock.png" class="fluid">
+			</div>
+			<div class="content-text">
+				<p>Luxury</p>
+			</div>
+			<div class="bottom">
+				<img src="Website Images/RCEC Logo Transition 250.png" class="fluid">
+				<a href="RoyalMagicProgram.html"><div class="content-desc">
+					<p>Click for more info!</p>
+				</div></a>
+			</div>
+		</div>
+		<div class="text-content">
+		<p><span>R</span>oyal <span>M</span>agic <span>J</span>ubilee</p>
+		</div>
+	</div>
+</div>
+<!-- Program videos that showcase each type of program -->
+<div class="grid-container-artist" id="Program-Three-Shows">
+	<div>
+		<div class="grid-item">
+			<iframe src="https://www.youtube.com/embed/lEIHemz-y4Q" frameborder="0" width="100%" height="100%"></iframe>
+		</div>
+		<div class="text-content">
+		<p>Introduction Video &#40x seconds&#41</p>
+		</div>
+	</div>
+
+	<div>
+		<div class="grid-item">
+			<iframe src="https://www.youtube.com/embed/lEIHemz-y4Q" frameborder="0" width="100%" height="100%"></iframe>
+		</div>
+		<div class="text-content">
+		<p>Introduction Video &#40x seconds&#41</p>
+		</div>
+	</div>
+
+	<div>
+		<div class="grid-item">
+			<iframe src="https://www.youtube.com/embed/lEIHemz-y4Q" frameborder="0" width="100%" height="100%"></iframe>
+		</div>
+		<div class="text-content">
+		<p>Introduction Video &#40x seconds&#41</p>
+		</div>
+	</div>
+</div>
 <!-- Artist heading text -->
 	<div class="separator">Artists</div>
 <!-- Artist heading text -->
@@ -504,11 +596,13 @@
 	</div>
 <!-- Company Statement image -->
 	<div class="CompanyStatement">
-		<img src="Website Images/CompanyStatement.png" alt="placeholder" style="width: 75%;">
+		<img src="Website Images/CompanyStatement.png" alt="placeholder" style="width: 100%;">
 	</div>
 
 </body>
+
 <hr style="color: white;">
+
 <footer>
 	<div class="grid-container">
 		<div class="item">
@@ -520,9 +614,9 @@
 
 		<div class="item">
 			<h3>Business Inquiries</h3>
-              <p><a href="SponsorUs.html"><span class="footer-link">Sponsor Us!<br></span></a>
-                <a href="HowToJoin.html"><span class="footer-link">How to join!<br></span></a>
-                <a href="FAQ.html"><span class="footer-link">FAQ</span></a><strong><br></strong></p>
+              <p><a href="../RCEC Code/SponsorUs.html"><span class="footer-link">Sponsor Us!<br></span></a>
+                <a href="../RCEC Code/HowToJoin.html"><span class="footer-link">How to join!<br></span></a>
+                <a href="../RCEC Code/FAQ.html"><span class="footer-link">FAQ</span></a><strong><br></strong></p>
 		</div>
 
 		<div class="item">
@@ -533,7 +627,7 @@
 			<a href="https://www.youtube.com/@TheRCEC" target="_blank">
 			<img src="Website Images/Youtube.png" alt="Youtube Icon" class="footer-icon"></a>
 			
-          	<p>Email us at: <a href="Contact.html" class="email">RoyalCanadianEntertainment@gmail.com</a><br></p>
+          	<p>Email us at: <a href="../RCEC Code/Contact.html" class="email">RoyalCanadianEntertainment@gmail.com</a><br></p>
 			
 		</div>
 	</div>
@@ -546,8 +640,7 @@
 			<p>© 2026 • Copyright (c) Royal Canadian Entertainment Company. All rights reserved.</p>
 		</div>
 	</div>
-	
-	
 </footer>
+	
 
 </html>
