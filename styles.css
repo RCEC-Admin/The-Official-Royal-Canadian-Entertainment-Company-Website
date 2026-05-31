@@ -224,6 +224,9 @@ body {
 
 /* Text Styles */
 
+u {
+  text-decoration-skip-ink: none;
+}
 
 #activeH {
     text-decoration: underline;
@@ -818,6 +821,15 @@ hr.section {
 
 
 /* Other programs */
+
+.Three-shows {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5vw;
+}
+
 .program {
   width: 100%;
   height: auto;
@@ -853,6 +865,7 @@ hr.section {
   text-align: center;
   font-size: clamp(.8rem, 1vw, 2rem);
   line-height: 2rem;
+  margin-bottom: 2vw;
 }
 
 .grid-button {
@@ -863,6 +876,7 @@ hr.section {
     margin: auto;
     cursor: pointer;
     text-align: center;
+
     a {
       background-color: transparent;
       box-sizing: border-box;
