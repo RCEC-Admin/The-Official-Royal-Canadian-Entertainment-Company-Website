@@ -384,38 +384,43 @@ u {
   border: none;
 }
 
-.Brands {
-    .carousel{
-        width: clamp(25%, 100vw, 100%);
-        border: none;
-        display: flex;
-        overflow-x: auto;
-        pointer-events: none;
-    }
+/* Brands */
 
-    .carousel::-webkit-scrollbar {
-        display: none;
-    }
+.logos__marquee {
+	display: flex;
+	overflow-x: hidden;
+	user-select: none;
+	mask-image: linear-gradient(
+		to right,
+		hsl(0 0% 0% / 0),
+		hsl(0 0% 0% / 1) 20%,
+		hsl(0 0% 0% / 1) 80%,
+		hsl(0 0% 0% / 0)
+	);
+    margin: 5vw 0;
+}
 
-    .group{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-        animation: slide 15s infinite linear;
-        padding-right: 1em;
-    }
+.marquee__logos {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: auto;
+	min-width: 100%;
+	animation: loop 15s linear infinite;
+}
+.marquee__logos img {
+	display: block;
+    height: auto;
+    width: 12vw;
+}
 
-    .card{
-        flex: 0 0 5em;
-        height: 5em;
-        padding: 1em;
-        background: none;
-        font-size: 3rem;
-        border-radius: .2em;
-        text-align: center;
-        align-content: center;
-    }
+@keyframes loop {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
 }
 
 /* spacers */
