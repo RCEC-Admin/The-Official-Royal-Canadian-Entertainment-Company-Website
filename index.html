@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/js" href="YoutubeReduction.js">
 
 	<title>Royal Canadian Entertainment</title>
 	<link rel="icon" href="Website Images/Page Images/Icons/RCEC Logo Clean Favicon.webp" type="Image/webp">
@@ -53,13 +54,76 @@
     </header>
 <main>
 <!-- Image Carousel -->
-<div class="IC1">
-	<div class="imgcarousel">
-		<div class="imgcard"><img src="Website Images/Page Images/Hero Banner 1.webp" alt="Magician at Lilac Festival"></div>
-		<div class="imgcard"><img src="Website Images/Page Images/Hero Banner 2.webp" alt="Magician with large crowd at Lilac Festival" loading="lazy"></div>
-		<div class="imgcard"><img src="Website Images/Page Images/Hero Banner 3.webp" alt="Magician at Calgary Lilac Festival" loading="lazy"></div>
-	</div>
-</div>
+
+<!--
+  ============================================================
+  IMAGE CAROUSEL — embed snippet
+  ============================================================
+  To use MULTIPLE carousels on one page, copy the entire
+  <section class="carousel"> block as many times as you need.
+  Each one works independently.
+
+  HOW TO ADD OR REMOVE IMAGES
+  ────────────────────────────
+  Edit the <img> tags inside <div class="carousel-images"> only.
+  Everything else is built automatically.
+
+  Each <img> needs:
+    src = path to your image
+    alt = a short description (used as caption + screen reader text)
+
+  Example:
+    <img src="photo.jpg" alt="Sunset over the ocean">
+  ============================================================ -->
+
+<section class="carousel" aria-roledescription="carousel" aria-label="Image gallery">
+
+  <!-- ════════════════════════════════
+       ADD OR REMOVE <img> TAGS HERE
+       ════════════════════════════════ -->
+  <div class="carousel-images" hidden>
+    <img src="./Website Images/Page Images/Hero Banner 1.webp"    alt="The RCEC Home Banner - Magician at the Calgary Lilac Festival">
+    <img src="./Website Images/Page Images/Hero Banner 2.webp"   alt="Children Enjoying Magician at Calgary Lilac Festival">
+    <img src="./Website Images/Page Images/Hero Banner 3.webp"   alt="Magic performance at Calgary Lilac Festival">
+  </div>
+  <!-- ════════════════════════════════ -->
+
+
+  <!-- Built by JavaScript — do not edit below this line -->
+  <div class="carousel__track-wrapper">
+    <!--
+      ul (unordered list): slides are a set of items, not a ranked sequence.
+      aria-live is on the caption only — announcing here too would double-fire.
+    -->
+    <ul class="carousel__track"></ul>
+  </div>
+
+  <!-- Caption reads the current image's alt text to screen readers -->
+  <p class="carousel__caption" aria-live="polite"></p>
+
+  <button class="carousel__btn carousel__btn--prev" aria-label="Previous image">
+    <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"/>
+    </svg>
+  </button>
+
+  <button class="carousel__btn carousel__btn--next" aria-label="Next image">
+    <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"/>
+    </svg>
+  </button>
+
+  <div class="carousel__controls">
+    <!-- ul: dots are navigation landmarks, not a ranked sequence -->
+    <ul class="carousel__dots" aria-label="Go to image"></ul>
+    <span class="carousel__counter" aria-hidden="true"></span>
+  </div>
+
+</section>
 
 <!-- Sub text below image Carousel -->
 	<div class="text-content">
@@ -76,31 +140,228 @@
 	</div>
 <!-- Portfolio horizontal video -->
 	<div class="PHV">
-		<div>
-			<iframe src="https://www.youtube.com/embed/2VdKrCtoz0M" title="RCEC Lilac Festival - Magic show goes wrong!" allowfullscreen loading="lazy"></iframe>
-		 </div>
+		<div class="video">
+			<div class="video__youtube" data-youtube>
+				<img src="https://i.ytimg.com/vi/2VdKrCtoz0M/maxresdefault.jpg" class="video__placeholder" loading="lazy" alt="Lilac Festival Highlight Performance"/>
+				<button class="youtube__button" data-youtube-button="https://www.youtube.com/embed/2VdKrCtoz0M"></button>
+			</div>
+		</div>
 	</div>
 <!-- Portfolio Vertical videos (3) -->
 	<div class="PVV">
-		<div>
-			<iframe src="https://www.youtube.com/embed/lEIHemz-y4Q" title="Test of new camera" allowfullscreen loading="lazy"></iframe>
+		<div class="video">
+			<div class="video__youtube" data-youtube>
+				<img src="https://i.ytimg.com/vi/lEIHemz-y4Q/maxresdefault.jpg" class="video__placeholder" />
+				<button class="youtube__button" data-youtube-button="https://www.youtube.com/embed/lEIHemz-y4Q"></button>
+			</div>
 		</div>
 
-		<div>
-			<iframe src="https://www.youtube.com/embed/lEIHemz-y4Q" title="Test of new camera" allowfullscreen loading="lazy"></iframe>
+		<div class="video">
+			<div class="video__youtube" data-youtube>
+				<img src="https://i.ytimg.com/vi/lEIHemz-y4Q/maxresdefault.jpg" class="video__placeholder" />
+				<button class="youtube__button" data-youtube-button="https://www.youtube.com/embed/lEIHemz-y4Q"></button>
+			</div>
 		</div>
 
-		<div>
-			<iframe src="https://www.youtube.com/embed/lEIHemz-y4Q" title="Test of new camera" allowfullscreen loading="lazy"></iframe>
+		<div class="video">
+			<div class="video__youtube" data-youtube>
+				<img src="https://i.ytimg.com/vi/lEIHemz-y4Q/maxresdefault.jpg" class="video__placeholder" />
+				<button class="youtube__button" data-youtube-button="https://www.youtube.com/embed/lEIHemz-y4Q"></button>
+			</div>
 		</div>	
 	</div>
 <!-- Portfolio Image Carousel -->
-	<div class="IC2">
-		<div class="imgcarousel">
-			<div class="imgcard"><img src="Website Images/Page Images/Large Crowd Lilac.webp" alt="Large crowd at Magic show at the Lilac Festival" loading="lazy"></div>
-			<div class="imgcard"><img src="Website Images/Page Images/Large Crowd Lilac 2.webp" alt="Large crowd at Magic show at the Lilac Festival" loading="lazy"></div>
-		</div>
-</div>
+<!-- Image Carousel -->
+
+<section class="carousel" aria-roledescription="carousel" aria-label="Image gallery">
+
+  <!-- ════════════════════════════════
+       ADD OR REMOVE <img> TAGS HERE
+       ════════════════════════════════ -->
+  <div class="carousel-images" hidden>
+    <img src="./Website Images/Page Images/Large Crowd Lilac 2.webp"    alt="Crowd of people enjoying magic at the Lilac Festival">
+    <img src="./Website Images/Page Images/Large Crowd Lilac.webp"   alt="The Royal Canadian Entertainment Company attracts mass crowd at Lilac Festival in Calgary Alberta">
+  </div>
+  <!-- ════════════════════════════════ -->
+
+
+  <!-- Built by JavaScript — do not edit below this line -->
+  <div class="carousel__track-wrapper">
+    <!--
+      ul (unordered list): slides are a set of items, not a ranked sequence.
+      aria-live is on the caption only — announcing here too would double-fire.
+    -->
+    <ul class="carousel__track"></ul>
+  </div>
+
+  <!-- Caption reads the current image's alt text to screen readers -->
+  <p class="carousel__caption" aria-live="polite"></p>
+
+  <button class="carousel__btn carousel__btn--prev" aria-label="Previous image">
+    <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"/>
+    </svg>
+  </button>
+
+  <button class="carousel__btn carousel__btn--next" aria-label="Next image">
+    <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"/>
+    </svg>
+  </button>
+
+  <div class="carousel__controls">
+    <!-- ul: dots are navigation landmarks, not a ranked sequence -->
+    <ul class="carousel__dots" aria-label="Go to image"></ul>
+    <span class="carousel__counter" aria-hidden="true"></span>
+  </div>
+
+</section>
+
+<!-- ============================================================
+     SCRIPT — paste once, just before </body>
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  var AUTOPLAY_DELAY = 5000; // milliseconds between auto-advances
+
+  document.querySelectorAll('.carousel').forEach(function (root) {
+    initCarousel(root);
+  });
+
+  function initCarousel(root) {
+    var source  = root.querySelector('.carousel-images');
+    var images  = Array.from(source.querySelectorAll('img'));
+    if (!images.length) return;
+
+    var track   = root.querySelector('.carousel__track');
+    var dotsNav = root.querySelector('.carousel__dots');
+    var caption = root.querySelector('.carousel__caption');
+    var counter = root.querySelector('.carousel__counter');
+    var btnPrev = root.querySelector('.carousel__btn--prev');
+    var btnNext = root.querySelector('.carousel__btn--next');
+
+    var current    = 0;
+    var total      = images.length;
+    var startX     = null;
+    var isDragging = false;
+    var timer      = null;
+    var paused     = false;
+
+    // ── Build slides and dots ─────────────────────────────────
+    images.forEach(function (img, i) {
+      var slide = document.createElement('li');
+      slide.className = 'carousel__slide';
+      slide.setAttribute('role', 'group');
+      slide.setAttribute('aria-roledescription', 'slide');
+      slide.setAttribute('aria-label', (i + 1) + ' of ' + total);
+      slide.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
+      slide.appendChild(img.cloneNode(true));
+      track.appendChild(slide);
+
+      var li  = document.createElement('li');
+      var dot = document.createElement('button');
+      dot.className = 'carousel__dot';
+      dot.setAttribute('aria-label', 'Image ' + (i + 1) + (img.alt ? ': ' + img.alt : ''));
+      if (i === 0) dot.setAttribute('aria-current', 'true');
+      dot.addEventListener('click', function () { goTo(i); });
+      li.appendChild(dot);
+      dotsNav.appendChild(li);
+    });
+
+    // ── Navigation ────────────────────────────────────────────
+    function goTo(index) {
+      var slides = track.querySelectorAll('.carousel__slide');
+      var dots   = dotsNav.querySelectorAll('.carousel__dot');
+
+      current = ((index % total) + total) % total;
+      track.style.transform = 'translateX(-' + current * 100 + '%)';
+
+      slides.forEach(function (s, i) {
+        s.setAttribute('aria-hidden', i !== current ? 'true' : 'false');
+      });
+
+      dots.forEach(function (d, i) {
+        i === current
+          ? d.setAttribute('aria-current', 'true')
+          : d.removeAttribute('aria-current');
+      });
+
+      caption.textContent = images[current].alt || '';
+      counter.textContent = (current + 1) + ' / ' + total;
+
+      restartTimer();
+    }
+
+    // ── Autoplay ──────────────────────────────────────────────
+    function startTimer() {
+      if (timer) return;
+      timer = setInterval(function () {
+        if (!paused) goTo(current + 1);
+      }, AUTOPLAY_DELAY);
+    }
+
+    function stopTimer() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    function restartTimer() {
+      stopTimer();
+      startTimer();
+    }
+
+    // Pause on mouse hover
+    root.addEventListener('mouseenter', function () { paused = true; });
+    root.addEventListener('mouseleave', function () { paused = false; });
+
+    // Pause when a keyboard user tabs focus into the carousel
+    root.addEventListener('focusin',  function () { paused = true; });
+    root.addEventListener('focusout', function () { paused = false; });
+
+    // ── Button + keyboard listeners ───────────────────────────
+    btnPrev.addEventListener('click', function () { goTo(current - 1); });
+    btnNext.addEventListener('click', function () { goTo(current + 1); });
+
+    root.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(current - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+    });
+
+    // ── Touch / swipe ─────────────────────────────────────────
+    track.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+      isDragging = false;
+      paused = true; // pause autoplay while the user is touching
+    }, { passive: true });
+
+    track.addEventListener('touchmove', function (e) {
+      if (startX === null) return;
+      isDragging = Math.abs(e.touches[0].clientX - startX) > 5;
+    }, { passive: true });
+
+    track.addEventListener('touchend', function (e) {
+      if (isDragging && startX !== null) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+      }
+      startX = null;
+      isDragging = false;
+      paused = false; // resume autoplay after touch ends
+    });
+
+    // ── Init ──────────────────────────────────────────────────
+    goTo(0);     // goTo calls restartTimer, so startTimer only fires once
+  }
+
+})();
+</script>
+
 <!-- Program heading text -->
 	<div class="separator">Programs</div>
 
@@ -176,29 +437,45 @@
 	<div class="grid-container-artist" id="Program-Three-Shows">
 		<div>
 			<div class="grid-item">
-				<iframe src="https://www.youtube.com/embed/g8XooEli6KI" title="RCEC Refined Magic Rendevous Charity Highlight Video" 
-				allowfullscreen loading="lazy"></iframe>
+				<div class="video">
+					<div class="video__youtube" data-youtube>
+						<img src="https://i.ytimg.com/vi/g8XooEli6KI/maxresdefault.jpg" class="video__placeholder" alt="RCEC Refined Magic Rendevous Charity Highlight Video" 
+						loading="lazy"/>
+						<button class="youtube__button" data-youtube-button="https://www.youtube.com/embed/g8XooEli6KI"></button>
+					</div>
+				</div>
+				<div class="text-content">
+					<p>Introduction Video (163 seconds)</p>
+				</div>
 			</div>
-			<div class="text-content">
-			<p>Introduction Video (163 seconds)</p>
+			
+		</div>
+
+		<div>
+			<div class="grid-item">
+				<div class="video">
+					<div class="video__youtube" data-youtube>
+						<img src="https://i.ytimg.com/vi/lEIHemz-y4Q/maxresdefault.jpg" class="video__placeholder" />
+						<button class="youtube__button" data-youtube-button="https://www.youtube.com/embed/lEIHemz-y4Q"></button>
+					</div>
+				</div>
+				<div class="text-content">
+					<p>Introduction Video &#40x seconds&#41</p>
+				</div>
 			</div>
 		</div>
 
 		<div>
 			<div class="grid-item">
-				<iframe src="https://www.youtube.com/embed/lEIHemz-y4Q" allowfullscreen loading="lazy"></iframe>
-			</div>
-			<div class="text-content">
-			<p>Introduction Video &#40x seconds&#41</p>
-			</div>
-		</div>
-
-		<div>
-			<div class="grid-item">
-				<iframe src="https://www.youtube.com/embed/lEIHemz-y4Q" allowfullscreen loading="lazy"></iframe>
-			</div>
-			<div class="text-content">
-			<p>Introduction Video &#40x seconds&#41</p>
+				<div class="video">
+					<div class="video__youtube" data-youtube>
+						<img src="https://i.ytimg.com/vi/lEIHemz-y4Q/maxresdefault.jpg" class="video__placeholder" />
+						<button class="youtube__button" data-youtube-button="https://www.youtube.com/embed/lEIHemz-y4Q"></button>
+					</div>
+				</div>
+				<div class="text-content">
+					<p>Introduction Video &#40x seconds&#41</p>
+				</div>
 			</div>
 		</div>
 	</div>
