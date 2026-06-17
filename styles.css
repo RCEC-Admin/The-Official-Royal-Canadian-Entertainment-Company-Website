@@ -321,7 +321,7 @@ u {
   .carousel__dots {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 1vw;
     flex: 1;
     list-style: none;
     flex-wrap: wrap;
@@ -405,7 +405,7 @@ u {
 
     
   @media screen and (max-width: 600px) {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 }
 
@@ -805,8 +805,7 @@ hr.section {
 
   .text-title{
     letter-spacing: .3vw;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff
-    
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
   }
 }
 .container-artist {
@@ -943,6 +942,7 @@ hr.section {
   height: auto;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10%;
 }
 
 .grid-program, .program-card {
@@ -995,65 +995,11 @@ hr.section {
 }
 
 /* YouTube Video Reduction */
-
-.video {
-    position: relative;
-    width: 100%;
+.YoutubeVideo {
+  width: 100%;
+  height: 100%;
 }
 
-.video__iframe {
-    position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.video__placeholder {
-	width: 100%;
-    position: absolute;
-}
-
-.video__youtube {
-    padding-bottom: 56.23%;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-	position: relative;
-    object-fit: cover;
-    background-color: black;
-}
-
-.youtube__button {
-    background: none;
-	border: 0;
-	cursor: pointer;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	text-indent: -9999px;
-	top: 0;
-	transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	width: 100%;
-}
-
-.youtube__button:before {
-    width:100%;
-    height:100%;
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background: url(https://www.youtube.com/yt/about/media/images/brand-resources/icons/YouTube-icon_dark.svg) no-repeat center center;
-    background-size: 10%; 
-}
-
-.youtube__button:hover:before {
-    background: url(https://youtube.com/yt/about/media/images/brand-resources/icons/YouTube-icon-full_color.svg) no-repeat center center;
-    background-size: 10%; 
-}
 
 /* UNIVERSAL TEXT STYLES */
 
@@ -1061,7 +1007,7 @@ hr.section {
     font-size: clamp(1rem, 2vw, 6rem);
     text-align: center;
     color: white;
-    line-height: 3.5rem;
+    line-height: clamp(1rem, 5vw, 3.5rem);
     margin: 2% 0;
 
   span {
