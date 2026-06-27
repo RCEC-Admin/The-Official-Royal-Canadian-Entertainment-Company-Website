@@ -8,30 +8,17 @@ jobs:
     name: rsync_to_server
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - name: Create SSH key
-=======
       - name: Checkout Code
         uses: actions/checkout@v4
       - name: Rsync Code to Remote
->>>>>>> d6065ad0c0cbb5c644abee5a1f2f2325d30c7b75
         run: |
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ../private.key
           sudo chmod 600 ../private.key
           echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-<<<<<<< HEAD
-=======
           rsync -rtvzPe "ssh -i $SSH_KEY_PATH" --delete --exclude .git ./ root@nolanmcmahon.net:/var/www/rcec/
->>>>>>> d6065ad0c0cbb5c644abee5a1f2f2325d30c7b75
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
           SSH_KEY_PATH: ${{ github.workspace }}/../private.key
-<<<<<<< HEAD
-      - name: rsync
-        run: |
-          rsync -rtvzPe "ssh -i $SSH_KEY_PATH" --delete --exclude .git ./ root@nolanmcmahon.net:/var/www/rcec/
-=======
->>>>>>> d6065ad0c0cbb5c644abee5a1f2f2325d30c7b75
