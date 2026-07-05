@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Please present your Royal Seal"
-AuthUserFile /var/www/The Royal Market Pages/.htpasswd
-Require valid-user
