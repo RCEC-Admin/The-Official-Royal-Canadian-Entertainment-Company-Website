@@ -697,6 +697,7 @@ u{
   text-decoration: none; animation: glow2 1.5s infinite alternate;
   padding: 0.521vw 7vw;
   font-size: clamp(1rem, 1vw, 2rem);
+  cursor: pointer;
   }
 
 /* Major Magic Content Business */
