@@ -997,6 +997,19 @@ hr.section {
     }
 }
 
+.Image-centered {
+  justify-content: space-evenly;
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+
+  img {
+    height: auto;
+    width: 30vw;
+  }
+}
+
 /* YouTube Video Reduction */
 .YoutubeVideo {
   width: 100%;
